@@ -1,0 +1,10 @@
+<parameters>
+
+<index>/Users/colin/Workspace/indri_tools/indexes/ap/</index>
+<outFile>/Users/colin/Workspace/indri_tools/result_files/ap/ap.bigrams</outFile>
+
+<maxdocs>0</maxdocs>
+<cutoff>0</cutoff>
+<conseq>true</conseq>
+
+</parameters>

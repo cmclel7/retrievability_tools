@@ -1,0 +1,7 @@
+[inputs]
+results_file_list = sample.list
+docid_list = sample.docids
+[outputs]
+results_directory =
+results_output = sample.ret
+show_titles = True

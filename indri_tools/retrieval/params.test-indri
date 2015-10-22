@@ -1,0 +1,14 @@
+<parameters>
+<index>/Users/leif/Code/indri-test/index</index>
+<queryFile>/Users/leif/Code/cppCode/RetrievalApplication/bigram.qry</queryFile>
+<resultFile>results.out</resultFile>
+<resultCount>1000</resultCount>
+<type>1</type>
+<model>1</model>
+<b>0.5</b>
+<c>5.0</c>
+<beta>2000</beta>
+<maxdocs>0</maxdocs>
+<cutoff>0</cutoff>
+<outFile>bigrams.out</outFile>
+</parameters>

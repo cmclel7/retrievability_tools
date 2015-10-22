@@ -1,0 +1,4 @@
+To run the retrievability calculations using results:
+python retrievability_calculator.py <script_name>
+ie
+python retrievability_calculator.py sample.script
