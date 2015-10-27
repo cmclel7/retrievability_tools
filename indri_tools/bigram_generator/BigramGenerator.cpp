@@ -92,10 +92,6 @@ int main( int argc, char** argv ) {
 			conseq = parameters["conseq"];
 		}
 		cerr << "conseq: " << conseq << endl;
-		int cutoff = 0;
-		if (parameters.exists("cutoff")){
-			cutoff = parameters["cutoff"];
-		}
 
 		bool topic=false;
 		if ((parameters.exists("docs")) && (parameters.exists("idmap"))){
@@ -103,15 +99,15 @@ int main( int argc, char** argv ) {
 			std::string idmapFile = parameters["idmap"];
 			topic=true;
 			
-			std::map<std::string int> name2id;
-			std::vector<std::string> docs;
-			std::string line;
-			while (std::getline(infile, line)){
-				std::istringstream iss(line);
-				std::string docname
-				if (!(iss >> docname)) { break; }
-				docs.pushback(docname);
-			}
+//			std::map<std::string, int> name2id;
+//			std::vector<std::string> docs;
+//			std::string line;
+//			while (std::getline(infile, line)){
+//				std::istringstream iss(line);
+//				std::string docname
+//				if (!(iss >> docname)) { break; }
+//				docs.pushback(docname);
+//			}
 		}
 
 		map< UINT64, int > bigrams; 
