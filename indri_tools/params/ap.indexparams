@@ -5,7 +5,7 @@
 <class>trectext</class>
 </corpus>
 <stemmer><name>porter</name></stemmer>
-<index>/Users/colin/Workspace/indri_tools/indexes/ap</index>
+<index>/Users/colin/Workspace/retrievability_tools/indri_tools/indexes/ap</index>
 <stopper>
 <word>a</word>
 <word>abaft</word>

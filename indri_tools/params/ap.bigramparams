@@ -1,7 +1,10 @@
 <parameters>
 
-<index>/Users/colin/Workspace/indri_tools/indexes/ap/</index>
-<outFile>/Users/colin/Workspace/indri_tools/result_files/ap/ap.bigrams</outFile>
+<index>/Users/colin/Workspace/retrievability_tools/indri_tools/indexes/ap/</index>
+<outFile>/Users/colin/Workspace/retrievability_tools/indri_tools/result_files/ap/ap.bigrams</outFile>
+
+
+<docsFile>/Users/colin/Workspace/retrievability_tools/indri_tools/extras/docs.txt</docsFile>
 
 <maxdocs>0</maxdocs>
 <cutoff>0</cutoff>
