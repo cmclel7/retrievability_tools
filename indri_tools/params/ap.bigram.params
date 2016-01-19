@@ -1,0 +1,7 @@
+<parameters>
+<index>/Users/kojayboy/Workspace/retrievability_tools/indri_tools/indexes/ap/</index>
+<outFile>/Users/kojayboy/Workspace/retrievability_tools/indri_tools/result_files/ap/ap.bigrams</outFile>
+<docsFile>/Users/kojayboy/Workspace/topics/ap/qrels.all</docsFile>
+<maxdocs>0</maxdocs> 
+<cutoff>0</cutoff> 
+</parameters>
