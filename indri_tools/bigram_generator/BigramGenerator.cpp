@@ -95,8 +95,6 @@ int main( int argc, char** argv ) {
 		}
 		cerr << "conseq: " << conseq << endl;
 
-		std::string docsFilePath = parameters["docsFile"];
-
 		std::vector<lemur::api::DOCID_T> documentIDlist;
 		if ((parameters.exists("docsFile"))){
 			cerr << "Reading DocsFile Param" << endl;
@@ -113,7 +111,7 @@ int main( int argc, char** argv ) {
 			while (!infile.eof()){
 				getline(infile, sLine);
 				docs.push_back(sLine);
-				cerr << sLine << endl;
+				//cerr << sLine << endl;
 			}			
 			lemur::api::DOCID_T documentID;
 			//Loop through every document in the collection to find each DocName
@@ -125,7 +123,7 @@ int main( int argc, char** argv ) {
 			// Create list of document IDs
 			for(int i=0; i < docs.size(); i++){
 				if (name2id.find(docs[i]) != name2id.end() ) {
-					cerr << name2id[docs[i]] << endl;
+				  //cerr << name2id[docs[i]] << endl;
 					documentIDlist.push_back(name2id[docs[i]]);
 				}
 			}
@@ -149,16 +147,17 @@ int main( int argc, char** argv ) {
 		UINT64 total_num_bigrams = 0;
 
 		// Switch this out to only go thru the documents we have specified
-		for (int docid = 1; docid < documentIDlist.size();  docid++){
+		for (int docid = 1; docid < documentIDlist.size()-1;  docid++){
 			int did = documentIDlist[docid];
 			documentIDs.clear();
 			documentIDs.push_back(did);
 			indri::server::QueryServerVectorsResponse* response = local.documentVectors( documentIDs );
 			curr_tid = 0;
 			prev_tid = 0;
+			cerr << response->getResults().size();
 			if ( response->getResults().size() ) {
 				indri::api::DocumentVector* docVector = response->getResults()[0];
-				//cout << endl;
+				cout << "Beginning to Extract Bigrams" << endl;
 				for( size_t i=0; i<docVector->positions().size(); i++ ) {
 					int position = docVector->positions()[i];
 				//if (position) cout << index->term(position) << " "; else cout << " * ";
@@ -188,21 +187,20 @@ int main( int argc, char** argv ) {
 				}
 
 				// const std::string& stem = docVector->stems()[position];
-				// std::cout << i << " " << position << " " << stem << std::endl;
-
-			  }
-			 delete docVector;
-			}
-			delete response;
+				// std::cout << i << " " << position << " " << stem << std::endl
+				}
+				//				delete docVector;
+				}
+			//delete response;
 		}
 		cerr << "Number of Bigrams: " << total_num_bigrams << endl;
 		cerr << "Number of Unique Bigrams: " << bigrams.size() << endl;
 		
 		double TV = double(local.termCount());
-		//cerr << "TV: " << TV << endl;
+		cerr << "TV: " << TV << endl;
 		
 		fstream out_file ( outFile.c_str(), ios::out | ios::trunc );
-		
+		cerr << "Writing to file" << endl;
 		int qid = 1;
 
 		for (iter = bigrams.begin(); iter != bigrams.end(); iter++ ) {

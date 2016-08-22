@@ -65,6 +65,8 @@ int main( int argc, char** argv ) {
       indri::collection::Repository::index_state state = r.indexes();
       indri::index::Index* index = (*state)[0];
       std::cout << "TOTAL" << " " << index->termCount() << " " << index->documentCount() << std::endl;
+      
+      cerr<< "Parameter File Read" << endl;
             
       int t = getIntValue(parameters, "type", 0);
       

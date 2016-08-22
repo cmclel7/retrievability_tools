@@ -1,6 +1,6 @@
 ## your application name here
 
-INDRIPATH=/Users/colin/Workspace/indri-5.9/
+INDRIPATH=/Users/kojayboy/Workspace/indri-5.9/
 
 include $(INDRIPATH)/MakeDefns
 SHARED=
