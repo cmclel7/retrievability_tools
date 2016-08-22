@@ -11,7 +11,7 @@ for b in bm25_measure_list:
     file.write('<parameters> \n\
 <index>/Users/kojayboy/Workspace/retrievability_tools/indri_tools/indexes/%s/</index> \n\
 <queryFile>/Users/kojayboy/Workspace/retrievability_tools/indri_tools/result_files/%s/%s.%s.bigrams.qry</queryFile> \n\
-<resultCount>100</resultCount> \n\
+<resultCount>500</resultCount> \n\
 <model>1</model> \n\
 <b>%.2f</b> \n\
 <maxdocs>0</maxdocs> \n\

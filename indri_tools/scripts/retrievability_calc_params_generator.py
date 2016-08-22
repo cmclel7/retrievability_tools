@@ -21,9 +21,9 @@ for b in bm25_measure_list:
             file = open(filename, 'w')
             file.write('[inputs] \n\
 results_file_list = /Users/kojayboy/Workspace/retrievability_tools/indri_tools/experiment_results/%s/%d/%s/%d/bm25.%.2f.list \n\
-docid_list = /Users/kojayboy/Workspace/retrievability_tools/indri_tools/experiment_results/%s/%s.docid \n\
+docid_list = /Users/kojayboy/Workspace/retrievability_tools/indri_tools/experiment_results/%s/%d/%s/bm25.%.2f.docid \n\
 [outputs] \n\
 results_directory = /Users/kojayboy/Workspace/retrievability_tools/indri_tools/experiment_results/%s/%d/%s/%d/ \n\
 results_output = bm25.%.2f.ret \n\
-show_titles = False' % (coll,topic,c,q,b,coll,c,coll,topic,c,q,b) )
+show_titles = False' % (coll,topic,c,q,b,coll,topic,c,b,coll,topic,c,q,b) )
         file.close()
